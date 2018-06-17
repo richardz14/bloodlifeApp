@@ -1,54 +1,30 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import {
-  GoogleMaps,
-  GoogleMap,
-  GoogleMapsEvent,
-  GoogleMapOptions,
-  CameraPosition,
-  MarkerOptions,
-  Marker
-} from '@ionic-native/google-maps';
+import { Component, ViewChild } from '@angular/core';
+import { NavController,Platform } from 'ionic-angular';
+import { Slides } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
-  map: GoogleMap;
-  constructor(public navCtrl: NavController) {
+  @ViewChild(Slides) slides: Slides;
+  backgrounds = [
+    'assets/background/background-1.jpg',
+    'assets/background/background-2.jpg',
+    'assets/background/background-3.jpg',
+    'assets/background/background-4.jpg'
+  ];
+  constructor(public navCtrl: NavController, private platform: Platform) {
 
+  }
+  goToSlide() {
+    this.slides.slideTo(2, 500);
+  } 
+  slideChanged() {
+    //let currentIndex = this.slides.getActiveIndex();
+    //console.log('Current index is', currentIndex);
   }
   ionViewDidLoad() {
-    this.loadMap();
+   
   }
-  loadMap() {
-
-    let mapOptions: GoogleMapOptions = {
-      camera: {
-         target: {
-           lat: 43.0741904,
-           lng: -89.3809802
-         },
-         zoom: 18,
-         tilt: 30
-       }
-    };
-
-    this.map = GoogleMaps.create('map_canvas', mapOptions);
-
-    let marker: Marker = this.map.addMarkerSync({
-      title: 'Ionic',
-      icon: 'blue',
-      animation: 'DROP',
-      position: {
-        lat: 43.0741904,
-        lng: -89.3809802
-      }
-    });
-    marker.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
-      alert('clicked');
-    });
-  }
-
 }

@@ -1,14 +1,90 @@
-<ion-header>
+<!--
+  <ion-header>
   <ion-navbar>
     <ion-title>
       Ionic Blank
     </ion-title>
   </ion-navbar>
 </ion-header>
+-->
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content class="bodyClass transparent-header" hide-header fullscreen no-padding>
+  <ion-slides class=" " style="position: fixed" pager="false" autoplay="2000" loop="true" speed="3500" effect="fade">
+      <ion-slide class="swiper-no-swiping slide-background" *ngFor="let background of backgrounds" 
+      [ngStyle]="{'background-image': 'url(' + background +')'}">
+      </ion-slide>
+  </ion-slides>
+
+  <ion-header>
+      <ion-navbar>
+          <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <div class="imageWrapperHead">
+          <img class="headerImage" src="assets/imgs/stand01.png" alt="header Image">
+        </div>
+      </ion-navbar>
+  </ion-header>
+  <div class="ion-card">
+      <ion-slides class="ion-card" slides autoplay="3000" loop="true" speed="500" pager (ionSlideDidChange)="slideChanged()">
+          <ion-slide class="image-carousel">
+              <img class="imageClass" src="assets/imgs/download1.jpg" alt="Product Image">
+          </ion-slide>
+          <ion-slide class="image-carousel">
+              <img class="imageClass" src="assets/imgs/download1.jpg" alt="Product Image">
+          </ion-slide>
+          <ion-slide class="image-carousel">
+              <img class="imageClass" src="assets/imgs/download1.jpg" alt="Product Image">
+          </ion-slide>
+      </ion-slides>
+  </div>
+
+  <ion-grid>
+      <ion-row>
+          <ion-col col-6>
+              <div class="buttonPanel buttonPanel-left">
+                  <button (click)="deposit_click()" class="buttonMenus" ion-button full> <ion-icon class="ion-icon" name="ios-briefcase-outline"></ion-icon></button>
+                  <span class="menuTittle"> Deposit </span>
+              </div>
+          </ion-col>
+          <ion-col col-6>
+              <div class="buttonPanel buttonPanel-right">
+                  <button (click)="withdraw_click()" class="buttonMenus" ion-button full><ion-icon class="ion-icon" name="ios-card"></ion-icon></button>
+                  <span class="menuTittle"> Withdrawal </span>
+              </div>
+          </ion-col>
+
+          <ion-col col-6>
+                  <div class="buttonPanel buttonPanel-left">
+                      <button (click)="savings_click()" class="buttonMenus" ion-button full><ion-icon class="ion-icon" name="md-reorder"></ion-icon></button>
+                      <span class="menuTittle"> Savings </span>
+                  </div>
+              </ion-col>
+
+          <ion-col col-6>
+              <div class="buttonPanel buttonPanel-right">
+                  <button (click)="loans_click()" class="buttonMenus" ion-button full><ion-icon class="ion-icon" name="ios-albums-outline"></ion-icon></button>
+                  <span class="menuTittle"> Loans </span>
+              </div>
+          </ion-col>
+          <ion-col col-6>
+                  <div class="buttonPanel buttonPanel-left">
+                      <button (click)="transfer_click()" class="buttonMenus" ion-button full><ion-icon class="ion-icon" name="ios-cloud-upload-outline"></ion-icon></button>
+                      <span class="menuTittle"> Transfer </span>
+                  </div>
+              </ion-col>
+          <ion-col col-6>
+              <div class="buttonPanel buttonPanel-right">
+                  <button (click)="reports_click()" class="buttonMenus" ion-button full><ion-icon class="ion-icon" name="md-pulse"></ion-icon></button>
+                  <span class="menuTittle"> Reports </span>
+              </div>
+          </ion-col>
+
+
+      </ion-row>
+  </ion-grid>
+
+  <div class="help-blocked"></div>
+
+
 </ion-content>

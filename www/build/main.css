@@ -25677,3 +25677,334 @@ ion-navbar.toolbar {
   min-height: calc(46px + constant(safe-area-inset-bottom));
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
+
+.align-center {
+  text-align: center;
+}
+
+.highlight {
+  background-color: #f4f4f4;
+}
+
+.help-blocked {
+  padding: 25px;
+}
+
+.help-blocked-min {
+  padding: 10px;
+}
+
+.center {
+  display: block;
+  margin: 0 auto;
+}
+
+.vertical-center {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.top-radius {
+  border-radius: 10% 10% 0 0;
+}
+
+.bottom-radius {
+  border-radius: 0 0 10% 10%;
+}
+
+.round {
+  border-radius: 50%;
+}
+
+.transparent-header .toolbar-content,
+.transparent-header .back-button {
+  color: white;
+}
+
+.transparent-header .toolbar-background,
+.transparent-header ion-navbar,
+.transparent-header ion-header {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+.transparent-header .header-md::after,
+.transparent-header .toolbar-background-ios {
+  background-image: none;
+  border-bottom: 0;
+}
+
+.transparent-header .header-ios .toolbar-background-ios,
+.transparent-header .footer-ios .toolbar-background-ios {
+  border: 0;
+}
+
+page-home {
+  /*
+    .buttonPanel-left{
+        border-top:    1px solid white;
+        border-right:  1px solid white;
+        border-bottom: 1px solid white;
+    }
+    .buttonPanel-right{
+        border-top:    1px solid white;
+        border-bottom: 1px solid white;
+        border-left:   1px solid white;
+    }
+    */
+  /** for rainbow animation  ----------------------*/
+}
+
+page-home .backgroungTransparent {
+  background: transparent !important;
+}
+
+page-home .imageClass {
+  max-width: 100%;
+  width: 100%;
+  max-height: 150px;
+}
+
+page-home .ion-card {
+  position: relative;
+  text-align: center;
+  height: 150px;
+  top: 27px;
+  margin-bottom: 55px;
+}
+
+page-home .card-title {
+  position: absolute;
+  top: 36%;
+  font-size: 2.0em;
+  width: 100%;
+  font-weight: bold;
+  color: #fff;
+}
+
+page-home .card-subtitle {
+  font-size: 1.0em;
+  position: absolute;
+  top: 52%;
+  width: 100%;
+  color: #fff;
+}
+
+page-home .image-carousel {
+  height: 100px;
+}
+
+@media screen and (min-height: 500px) {
+  page-home .image-carousel {
+    height: 150px;
+  }
+}
+
+page-home div.swiper-pagination {
+  top: 110px;
+  bottom: inherit;
+  height: 100%;
+  background: rgba(168, 167, 167, 0.2);
+}
+
+page-home .gridCss {
+  position: relative;
+}
+
+page-home .buttonMenus {
+  margin: auto;
+  margin-bottom: 4px;
+  height: 100px;
+  width: 100px;
+  border-radius: 15px;
+  color: black;
+  background-image: radial-gradient(circle, #c1d9f6, #bfcbe2, #b9becd, #b1b1b9, #a6a6a6);
+}
+
+page-home .buttonPanel {
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 150px;
+  height: 155px;
+  width: 100%;
+}
+
+page-home .ion-icon {
+  font-size: 50px;
+}
+
+page-home .row .col {
+  padding: 0 !important;
+  margin: 0;
+  width: 50%;
+}
+
+page-home .grid {
+  padding: 0 !important;
+  margin-bottom: -18px !important;
+  margin-top: -3px;
+}
+
+page-home .imageWrapperHead {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  /*for the img inside your div */
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 100%;
+}
+
+page-home .headerImage {
+  height: 28px;
+  margin: auto;
+}
+
+page-home .menuTittle {
+  width: 100%;
+  color: white;
+  font-size: 1em;
+  font-family: "Times New Roman", Times, serif;
+}
+
+page-login ion-content {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-color: transparent;
+}
+
+page-login .content-slider ion-slides,
+page-login .content-slider .swiper-container {
+  height: 100%;
+  width: auto;
+}
+
+page-login .text-slider ion-slides,
+page-login .text-slider .swiper-container {
+  height: 20vh;
+  width: auto;
+}
+
+page-login .zoom .slide-zoom {
+  height: 100%;
+}
+
+page-login .scroll-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+page-login .logo {
+  width: 100%;
+  max-width: 19em;
+  height: auto;
+  margin: 0 auto;
+}
+
+page-login ion-row {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+}
+
+page-login ion-col {
+  padding: 0 20px;
+}
+
+page-login span,
+page-login p,
+page-login h3 {
+  color: white;
+}
+
+page-login ion-label,
+page-login .input-has-focus {
+  color: #fff !important;
+}
+
+page-login ion-item {
+  border-radius: 3px !important;
+  padding-right: 16px !important;
+  margin-bottom: 5px !important;
+  color: #fff !important;
+  background-color: transparent !important;
+  font-size: 0.9em;
+}
+
+page-login .margin-bottom {
+  margin-bottom: 15px !important;
+}
+
+page-login ::-webkit-input-placeholder {
+  color: white !important;
+}
+
+page-login .item-inner {
+  border-bottom: 2px solid white !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-login .login-button {
+  width: 100%;
+  max-width: 40rem;
+  height: 50px;
+  font-size: 1.2em;
+}
+
+page-login .login-button span {
+  color: #18485a !important;
+}
+
+page-login .forgot-button {
+  font-weight: bold;
+  float: right;
+}
+
+page-login .forgot-button ion-icon {
+  padding-left: 10px;
+  font-size: 2.2rem;
+}
+
+page-login .goback-button {
+  font-weight: bold;
+  float: left;
+}
+
+page-login .goback-button ion-icon {
+  padding-right: 10px;
+  font-size: 2.2rem;
+}
+
+page-login .slide-button {
+  margin-top: 4rem;
+  font-weight: bold;
+}
+
+page-login .slide-button ion-icon {
+  padding-left: 10px;
+  font-size: 2.2rem;
+}
+
+page-login .position-bottom {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  right: 0;
+  margin: 0 auto;
+  width: 200px;
+}
